@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import swal from 'sweetalert'
 
 export default function App() {
   
@@ -23,7 +24,11 @@ export default function App() {
         "Content-Type": "application/json",
       
       }
-    }).then((d)=>{console.log(d)}).catch((e)=>{console.log(e)})
+    }).then((d)=>{swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+    })}).catch((e)=>{console.log(e)})
  }
 
 
